@@ -6,13 +6,18 @@
 </head>
 <body>
 
+<h2><%= @items.inspect %></h2>
+
+ <%= debug(@items.inspect) %>
+
+
 
 <h1>出品商品一覧</h1>
 <!--
 <li><a href="/items/<%= @items[0].id %>"><%= @items[0].name %></a></li>
 <li><a href="/items/<%= @items[1].id %>"><%= @items[1].name %></a></li>
+-->
 
- -->
 <% @items.each do |item| %>
 <li><a href="/items/<%= item.id %>"><%= item.name %></a></li>
 <% end  %>
